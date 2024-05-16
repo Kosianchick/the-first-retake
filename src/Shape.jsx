@@ -14,10 +14,10 @@ function Shape({ tfrColor = 'red', tfrType = 'circle', onClick, count }) {
 
     return (
         <motion.div
-            className={`shape ${tfrType}`}
+            className={`shape ${tfrType}`} // Додає клас базовий та специфічний для типу
             style={{ backgroundColor: tfrColor }}
             initial={{ opacity: 1 }}
-            animate={{ opacity: animate ? 0.5 : 2 }} 
+            animate={{ opacity: animate ? 0.5 : 1 }} 
             transition={{
                 duration: 0.2,
                 repeat: 1,

@@ -1,26 +1,28 @@
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 import StatsBar from './StatsBar';
 import ShapesLine from './ShapesLine';
+import { useContext } from 'react';
+import { ShapesLineContext } from './ShapesLineProvider';
 
-function Layout({ direction, stats, onShapeClick }) {
-    return (
-        <div>
-            <StatsBar stats={stats} />
-            <ShapesLine direction={direction} onShapeClick={onShapeClick}
-                        redCount={stats.red} blueCount={stats.blue} greenCount={stats.green} />
-        </div>
-    );
+function Layout({ direction }) {
+  const { shapes, incrementClicks } = useContext(ShapesLineContext);
+
+  const stats = shapes.reduce((acc, shape) => {
+    const typeKey = shape.type.toLowerCase(); 
+    acc[typeKey] = (acc[typeKey] || 0) + shape.clicks;
+    return acc;
+  }, { circle: 0, star: 0, triangle: 0 });
+
+  return (
+    <div>
+      <StatsBar stats={stats} />
+      <ShapesLine direction={direction} onShapeClick={incrementClicks} stats={shapes} />
+    </div>
+  );
 }
 
-
 Layout.propTypes = {
-    direction: PropTypes.oneOf(['horizontal', 'vertical']).isRequired,
-    stats: PropTypes.exact({
-        red: PropTypes.number,
-        blue: PropTypes.number,
-        green: PropTypes.number
-    }).isRequired,
-    onShapeClick: PropTypes.func.isRequired
+  direction: PropTypes.oneOf(['horizontal', 'vertical']).isRequired
 };
 
 export default Layout;

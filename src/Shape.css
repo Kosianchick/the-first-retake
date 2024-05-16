@@ -2,27 +2,26 @@
     width: 70px;
     height: 70px;
     margin: auto;
-    background-color: #000000; 
     display: flex;
     justify-content: center; 
     align-items: center;
     font-weight: bold;
     flex-direction: column; 
     position: relative;
-    
 }
+
 .circle {
     border-radius: 50%;
     background-color: red;
     color: rgb(0, 0, 0);
 }
 
-.rectangle {
-    background-color: yellow;
-    width: 100px;  
-    height: 100px; 
-}
+.star {
 
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
 
 .triangle {
     color: rgb(0, 0, 0);

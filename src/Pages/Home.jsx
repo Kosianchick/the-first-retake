@@ -5,23 +5,20 @@ function Home() {
   return (
     <div className="posi">
       <h1>Головна сторінка</h1>
-      <p>1. створити гілку task7 з гілки task6
+      <p>1. створити гілку task8 з гілки task7
         <br></br>
         <br></br>
-2. Відрефакторити лабораторну роботу використовуючи react context api (лекція №6).
-   - створити ShapesLineProvider
+2. Релаізувати API з наступним функціоналом (див. лекції 8 та 9)
+<br></br>
+<br></br>
+   - **Управління статистикою**: API повинен надавати можливість керувати статистикою кліків.
    <br></br>
    <br></br>
-3. Встановити бібліотеку [json-server](https://www.npmjs.com/package/json-server)
+3. в корені проєкту створити файли googleapp.js куди перенесіть код вашої API  
 <br></br>
 <br></br>
-4. у файлі db.json реалізувати структуру збереження даних для ShapesLine (колір, тип фігури, кількість кліків, тощо)
-<br></br>
-<br></br>
-5. у ShapesLineProvider реалізувати можливість роботи з db.json (лекція №7)
-<br></br>
-<br></br>
-6. Запушити гілку task7 в github.classroom</p>
+4. Запушити гілку task8 в github.classroom
+</p>
     </div>
   );
 }
