@@ -4,6 +4,7 @@ import Header from './Header';
 import Home from './Pages/Home';
 import ErrorPage from './Pages/ErrorPage';
 import Layout from './Layout'; 
+import { ShapesLineProvider } from './ShapesLineProvider';
 import './App.css';
 
 function App() {
@@ -46,12 +47,14 @@ function App() {
     ]);
 
     return (
+        <ShapesLineProvider>  
         <RouterProvider router={router}>
             <div>
-                <Outlet />
+                <Outlet /> 
             </div>
         </RouterProvider>
-    );
+    </ShapesLineProvider>
+);
 }
 
 export default App;
