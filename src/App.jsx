@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './Header';
 import AppContent from './AppContent';  
 import { ShapesLineProvider } from './ShapesLineProvider';
-import './App.css';
+
 
 function App() {
     return (

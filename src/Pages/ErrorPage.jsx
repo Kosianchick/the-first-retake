@@ -1,5 +1,5 @@
 
-import './ErrorPage.css';
+
 
 function ErrorPage() {
   return (

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Shape from './Shape';
-import './ShapesLine.css';
+
 
 function ShapesLine({ direction, onShapeClick, stats }) {
   const containerClass = direction === 'vertical' ? 'shapes-line vertical' : 'shapes-line horizontal';
@@ -9,8 +9,8 @@ function ShapesLine({ direction, onShapeClick, stats }) {
     <div className={containerClass}>
       {stats.map((shape, index) => {
        
-        const tfrColor = ['red', 'yellow', 'green'][index % 3]; 
-        const tfrType = ['retangle', 'circle', 'triangle'][index % 3]; 
+        const tfrColor = ['red', 'blue', 'green'][index % 3]; 
+        const tfrType = ['circle', 'star', 'triangle'][index % 3]; 
 
         return (
           <Shape

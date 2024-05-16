@@ -1,16 +1,15 @@
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { ShapesLineContext } from './ShapesLineProvider';
-import './StatsBar.css';
 
 function StatsBar({ stats }) {
   const { resetClicks } = useContext(ShapesLineContext); 
 
   return (
     <div className='StatsCount'>
-        <p style={{color: 'red', fontWeight: 'bold', marginLeft: '20px'}}>Червоний квадрат: {stats.red}</p>
-        <p style={{color: 'yellow', fontWeight: 'bold'}}>Жовте коло: {stats.blue}</p>
-        <p style={{color: 'green', fontWeight: 'bold'}}>Зелений трикутник: {stats.green}</p>
+      <p style={{color: 'red', fontWeight: 'bold'}}>Червоне коло: {stats.red}</p>
+      <p style={{color: 'blue', fontWeight: 'bold'}}>Синя зірка: {stats.blue}</p>
+      <p style={{color: 'green', fontWeight: 'bold'}}>Зелений трикутник: {stats.green}</p>
       <button onClick={resetClicks}>Очистити кліки</button>
     </div>
   );

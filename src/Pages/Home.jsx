@@ -1,9 +1,9 @@
 
-import './Home.css';
+
 
 function Home() {
   return (
-    <div className="posi">
+    <div className="home">
       <h1>Головна сторінка</h1>
       <p>1. створити гілку task8 з гілки task7
         <br></br>
