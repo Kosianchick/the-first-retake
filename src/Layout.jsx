@@ -7,7 +7,7 @@ function Layout({ direction, stats, onShapeClick }) {
         <div>
             <StatsBar stats={stats} />
             <ShapesLine direction={direction} onShapeClick={onShapeClick}
-                        redCount={stats.red} yellowCount={stats.blue} greenCount={stats.green} />
+                        redCount={stats.red} blueCount={stats.blue} greenCount={stats.green} />
         </div>
     );
 }

@@ -12,6 +12,7 @@
     width: 100px;
     height: 250px;
     margin-left: 245px;
+    margin-top: 15px;
 }
 
 .horizontal {
@@ -19,6 +20,7 @@
     width: 250px;
     height: 100px;
     margin-left: 170px;
+    margin-top: 25px;
 }
 
 .Counter {

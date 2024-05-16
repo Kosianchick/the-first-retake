@@ -8,20 +8,20 @@ import './App.css';
 
 function App() {
     const [redCount, setRedCount] = useState(0);
-    const [yellowCount, setBlueCount] = useState(0);
+    const [blueCount, setBlueCount] = useState(0);
     const [greenCount, setGreenCount] = useState(0);
 
     const handleShapeClick = (color) => {
         if (color === 'red') {
             setRedCount(prevCount => prevCount + 1);
-        } else if (color === 'yellow') {
+        } else if (color === 'blue') {
             setBlueCount(prevCount => prevCount + 1);
         } else if (color === 'green') {
             setGreenCount(prevCount => prevCount + 1);
         }
     };
 
-    const stats = { red: redCount, blue: yellowCount, green: greenCount };
+    const stats = { red: redCount, blue: blueCount, green: greenCount };
 
     const router = createBrowserRouter([
         {
