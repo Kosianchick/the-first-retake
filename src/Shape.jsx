@@ -1,18 +1,24 @@
 import PropTypes from 'prop-types';
 import './Shape.css';
 
-function Shape({ tfrColor = 'red', tfrType = 'circle' }) {
+function Shape({ tfrColor = 'red', tfrType = 'circle', onClick, count }) {
     return (
         <div
             className={`shape ${tfrType}`} 
             style={{ backgroundColor: tfrColor }}
-        ></div>
+            onClick={onClick}
+            
+        >
+            {count}
+        </div>
     );
 }
 
 Shape.propTypes = {
     tfrColor: PropTypes.string,
-    tfrType: PropTypes.oneOf(['circle']),
+    tfrType: PropTypes.oneOf(['rectangle', 'circle', 'triangle']),
+    onClick: PropTypes.func,
+    count: PropTypes.number
 };
 
 export default Shape;
