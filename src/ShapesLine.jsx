@@ -7,7 +7,7 @@ function ShapesLine({ direction, onShapeClick, redCount, yellowCount, greenCount
 
     return (
         <div className={containerClass}>
-            <Shape tfrColor="red" tfrType="retangle" onClick={() => onShapeClick('red')} count={redCount} />
+             <Shape tfrColor="red" tfrType="retangle" onClick={() => onShapeClick('red')} count={redCount} />
             <Shape tfrColor="yellow" tfrType="circle" onClick={() => onShapeClick('yellow')} count={yellowCount} />
             <Shape tfrColor="green" tfrType="triangle" onClick={() => onShapeClick('green')} count={greenCount} />
         </div>

@@ -16,7 +16,7 @@ function Shape({ tfrColor = 'red', tfrType = 'circle', onClick, count }) {
 
 Shape.propTypes = {
     tfrColor: PropTypes.string,
-    tfrType: PropTypes.oneOf(['retangle', 'circle', 'triangle']),
+    tfrType: PropTypes.oneOf(['circle', 'star', 'triangle']),
     onClick: PropTypes.func,
     count: PropTypes.number
 };

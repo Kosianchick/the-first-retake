@@ -1,42 +1,56 @@
 import { useState } from 'react';
-import ShapesLine from './ShapesLine';
-import StatsBar from './StatsBar';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import Header from './Header';
+import Home from './Pages/Home';
+import ErrorPage from './Pages/ErrorPage';
+import Layout from './Layout'; 
 import './App.css';
 
 function App() {
-    const [direction, setDirection] = useState("horizontal");
     const [redCount, setRedCount] = useState(0);
     const [yellowCount, setBlueCount] = useState(0);
     const [greenCount, setGreenCount] = useState(0);
 
     const handleShapeClick = (color) => {
         if (color === 'red') {
-            setRedCount(redCount + 1);
+            setRedCount(prevCount => prevCount + 1);
         } else if (color === 'yellow') {
-            setBlueCount(yellowCount + 1);
+            setBlueCount(prevCount => prevCount + 1);
         } else if (color === 'green') {
-            setGreenCount(greenCount + 1);
+            setGreenCount(prevCount => prevCount + 1);
         }
     };
 
-    const toggleDirection = () => {
-        setDirection(prevDirection => prevDirection === "horizontal" ? "vertical" : "horizontal");
-    };
+    const stats = { red: redCount, blue: yellowCount, green: greenCount };
+
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element: <><Header /><Outlet /></>,
+            errorElement: <ErrorPage />,
+            children: [
+                {
+                    index: true,
+                    element: <Home />
+                },
+                {
+                    path: "horizontal",
+                    element: <Layout direction="horizontal" stats={stats} onShapeClick={handleShapeClick} />,
+                },
+                {
+                    path: "vertical",
+                    element: <Layout direction="vertical" stats={stats} onShapeClick={handleShapeClick} />,
+                }
+            ]
+        },
+    ]);
 
     return (
-        <div>
-            <StatsBar toggleDirection={toggleDirection} stats={{ red: redCount, blue: yellowCount, green: greenCount }} />
-            <h1 className={direction === "horizontal" ? 'Hor' : 'Ver'}>
-                {direction === "horizontal" ? "Горизонтальний ряд" : "Вертикальний ряд"}
-            </h1>
-            <div style={{ display: 'flex', flexDirection: direction === "horizontal" ? 'row' : 'column' }}>
-                <ShapesLine direction={direction}
-                  onShapeClick={handleShapeClick}
-                  redCount={redCount}
-                  yellowCount={yellowCount}
-                  greenCount={greenCount} />
+        <RouterProvider router={router}>
+            <div>
+                <Outlet />
             </div>
-        </div>
+        </RouterProvider>
     );
 }
 
