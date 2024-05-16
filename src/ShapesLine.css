@@ -4,20 +4,21 @@
     align-items: center;
     background-color: black;
     border-radius: 15px;
+    margin-bottom: 200px;
 }
 
 .vertical {
     flex-direction: column; 
     width: 100px;
     height: 250px;
-    margin-left: 140px;
+    margin-left: 245px;
 }
 
 .horizontal {
     flex-direction: row; 
     width: 250px;
     height: 100px;
-    margin-left: 60px;
+    margin-left: 170px;
 }
 
 .Counter {
