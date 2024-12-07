@@ -1,1 +1,3 @@
-# the-first-retake
+## Посилання
+
+- https://thefirstretake.netlify.app

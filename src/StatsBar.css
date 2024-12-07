@@ -1,0 +1,33 @@
+.StatsCount {
+  display: flex;
+  background-color: black;
+  width: 800px;
+  height: 60px;
+  border-radius: 15px;
+  gap: 50px;
+}
+
+
+.StatsCount button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: Gray; 
+    border: none;
+    border-radius: 55px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .StatsCount button:hover {
+    background-color:gray;
+  }
+  
+  .StatsCount button:active {
+    background-color:gray; 
+  }
+  
+  .StatsCount button:focus {
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); 
+  }

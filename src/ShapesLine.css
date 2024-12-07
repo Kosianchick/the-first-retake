@@ -1,0 +1,28 @@
+.shapes-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 15px;
+    margin-bottom: 200px;
+}
+
+.vertical {
+    flex-direction: column; 
+    width: 100px;
+    height: 250px;
+    margin-left: 335px;
+    margin-top: 15px;
+}
+
+.horizontal {
+    flex-direction: row; 
+    width: 250px;
+    height: 100px;
+    margin-left: 250px;
+    margin-top: 25px;
+}
+
+.Counter {
+    margin-right: 50px;
+}
