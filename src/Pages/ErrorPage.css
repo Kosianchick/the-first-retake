@@ -1,0 +1,18 @@
+.error-container {
+    padding: 20px;
+    margin-top: 50px; 
+    text-align: center;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 8px; 
+    color: #856404;
+}
+
+.error-title {
+    color: #ff0000; 
+    margin-bottom: 15px; 
+}
+
+.error-message {
+    color: #333; 
+}

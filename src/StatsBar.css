@@ -1,0 +1,9 @@
+.StatsCount {
+    display: flex;
+    background-color: black;
+    width: 600px;
+    height: 60px;
+    border-radius: 15px;
+    gap: 50px;
+    margin-bottom: 20px;
+}
