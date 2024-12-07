@@ -1,0 +1,32 @@
+.shape {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    background-color: #000000; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-weight: bold;
+    flex-direction: column; 
+    position: relative;
+    
+}
+.circle {
+    border-radius: 50%;
+    background-color: red;
+    color: rgb(0, 0, 0);
+}
+
+.rectangle {
+    background-color: yellow;
+    width: 100px;  
+    height: 100px; 
+}
+
+
+.triangle {
+    color: rgb(0, 0, 0);
+    background-color: green;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
