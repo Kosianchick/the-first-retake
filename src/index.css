@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.home {
+  @apply w-full h-12 text-xl fixed mt-12 top-0 left-0
+}
+
+.App {
+  @apply flex justify-center items-center relative h-full w-full gap-x-8 gap-y-8 pt-4;
+}
+.AppContent{
+  @apply absolute max-w-screen-md top-52  flex justify-center items-center;
+}
+.header {
+  @apply flex justify-center items-center;
+}
+.Layout{
+  @apply flex items-center flex-col transform rotate-[-90deg];
+}
+.Shape {
+  @apply min-h-16 border border-spacing-1 border-black  rounded-[30px] bg-transparent flex items-center flex-col p-4 mb-28 gap-4 text-center text-black;
+}
+.ShapeLine {
+  @apply bg-gray-500 h-[100px] w-[100px] rounded-full flex justify-center items-center cursor-pointer;
+}
+.StatsBar {
+  @apply flex flex-row gap-[500px] items-center;
+}
+.nav-container{
+  @apply flex items-center gap-4 ml-14 font-bold text-4xl
+}
+.navbar {
+  @apply relative right-1 justify-center flex font-sans font-semibold text-lg gap-6;
+}
+.button{
+  @apply absolute bottom-20 right-[610px] 
+}
+
+
